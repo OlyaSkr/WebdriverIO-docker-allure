@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out code 
         uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
             node-version: '16.x'
       - name: Install
@@ -27,14 +27,14 @@ jobs:
         if: always()
         run: npm run allure-report-generate             
       - name: Publishing Allure artifact to Github Actions
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
             name: allure-report
             path: allure-report/
-            
+
       - name: Get Allure history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
