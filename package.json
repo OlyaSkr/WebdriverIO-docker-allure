@@ -1,0 +1,31 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@types/mocha": "^10.0.0",
+        "@wdio/allure-reporter": "^7.25.2",
+        "@wdio/cli": "^7.25.2",
+        "@wdio/firefox-profile-service": "^7.25.1",
+        "@wdio/local-runner": "^7.25.2",
+        "@wdio/mocha-framework": "^7.25.2",
+        "@wdio/selenium-standalone-service": "^7.25.1",
+        "@wdio/spec-reporter": "^7.25.1",
+        "allure-commandline": "^2.18.1",
+        "chai": "^4.3.6",
+        "chromedriver": "^106.0.1",
+        "cross-env": "^7.0.3",
+        "wdio-chromedriver-service": "^8.0.0",
+        "wdio-docker-service": "^3.2.1"
+    },
+    "scripts": {
+        "test:single test": "npx wdio config/wdio.conf.js",
+        "test": "npx wdio config/wdio.conf.js",
+        "test:chrome": "npx wdio config/wdio.chrome.conf.js",
+        "test:chrome:headless": "npx wdio config/wdio.chrome.headless.conf.js",
+        "test:firefox": "npx wdio config/wdio.firefox.conf.js",
+        "test:firefox:headless": "npx wdio config/wdio.firefox.headless.conf.js",
+        "allure-report-generate": "allure generate ./allure-results --clean",
+        "allure-report-open": "npx allure open allure-report"
+    }
+}
